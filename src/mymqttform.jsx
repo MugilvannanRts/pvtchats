@@ -70,6 +70,7 @@ export default function MyMqttForm() {
 
         if (imageToUpload) {
             const reader = new FileReader();
+            const timestamp = getFormattedTime();
             reader.readAsDataURL(imageToUpload);
             reader.onloadend = () => {
                 const base64Image = reader.result;
